@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 .text{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu Mono', monospace;
     color: #FFF;
     text-decoration: none;
 }
 .main{
+    width: 5ch;
     font-size: 72px;
+    letter-spacing: 5px;
     color: whitesmoke;
     position: absolute;
     top: 50%;
@@ -13,8 +15,30 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    white-space: nowrap; 
+    overflow: hidden; 
     text-shadow: 6px 3px 15px #3f51b5;
+    border-right: 3px solid white;
+    animation: cursor 0.75s step-end infinite, printed_text 5s steps(5);
 }
+@keyframes cursor {
+    0%{
+        border-color: white;
+    }
+
+    50%{
+        border-color: transparent;
+    }
+
+    100%{
+        border-color: white;
+    }
+} 
+@keyframes printed_text {
+    from{
+        width: 0;
+    }
+}       
 .youtube-video-background {
     background: url(/images/video-bg.jpg) no-repeat #333333;  
     position: fixed;
@@ -45,7 +69,9 @@
     opacity: 50%;
     z-index: 1;
 }
-
+.icon{
+    filter: invert(1);
+}
 footer{
     word-spacing: 10px;
     z-index: 2;
@@ -55,7 +81,6 @@ footer{
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
-
 .text:visited{
     color: white;
 }
