@@ -7,7 +7,7 @@
 .main{
     width: 5ch;
     font-size: 72px;
-    letter-spacing: 5px;
+    letter-spacing: 0.1ch;
     color: whitesmoke;
     position: absolute;
     top: 50%;
