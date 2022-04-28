@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 .text{
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu Mono';
     color: #FFF;
     text-decoration: none;
 }
@@ -80,6 +80,12 @@ footer{
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+.link{
+    transition: all 1s ease 0s;
+}
 .text:visited{
     color: white;
+}
+.link:hover{
+    color: rgb(140, 165, 233);
 }
